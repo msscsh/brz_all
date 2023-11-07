@@ -3,7 +3,7 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 // home screen
 import Welcome from "./home/welcome/Welcome";
 import Nearbyjobs from "./home/nearby/Nearbyjobs";
-import PopularBrawlers from "./home/popular/PopularBrawlers";
+import PopularBrawlers from "./home/popular/Popularbrawlers";
 
 // job details screen
 import Company from "./jobdetails/company/Company";

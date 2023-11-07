@@ -1,15 +1,16 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native'
-import { useRouter } from 'expo-router'
+import { useState } from 'react';
+import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
+import { useRouter } from 'expo-router';
 
-import styles from './popularBrawlers.style'
-import { COLORS, SIZES } from '../../../constants'
-import { PopularBrawlerCard } from '../../common/cards/popular/PopularBrawlerCard'
+import styles from './popularbrawlers.style';
+import { COLORS, SIZES } from '../../../constants';
+import { PopularBrawlerCard } from '../../common/cards/popular/Popularbrawlercard';
 
 
-const PopularBrawlers = () => {
+const Popularbrawlers = () => {
   const router = useRouter();
-  const isLoading = true;
+  const isLoading = false;
   const error = false;
 
   return (
@@ -29,16 +30,11 @@ const PopularBrawlers = () => {
         ) : (
           <FlatList 
             data={[1, 2, 3, 4]}
-            renderItem={() => (
-              <PopularBrawlerCard
-                item={item}
-              />
-            )}
           />
         )}
       </View> 
     </View>
-  )
+  );
 }
 
-export default PopularBrawlers
+export default Popularbrawlers
