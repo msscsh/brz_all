@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9fa090; /* Cinza claro como plano de fundo */
+    color: #333; /* Texto mais escuro */
+}
+
+header {
+    background-color: #fdd835; /* Amarelo mais claro */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333; /* Cinza mais escuro */
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    max-height: 80px;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-height: 100%;
+    margin: 10px;
+    width: 70px;
+    height: auto;
+}
+
+.player-info {
+    line-height: 1.2;
+}
+
+
+
+
+.carousel-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.news-card {
+  display: none;
+  text-align: center;
+  flex: 0 0 100%;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
