@@ -1,22 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-  let currentIndex = 0;
-  const newsItems = document.querySelectorAll('.news-card');
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-  function showNews(index) {
-    // Oculta todas as notícias
-    newsItems.forEach(item => {
-      item.style.display = 'none';
-    });
+document.querySelector("h1").onmouseover = event => {
+  let iterations = 0;
 
-    // Exibe a notícia com o índice atual
-    newsItems[index].style.display = 'block';
-  }
+  const interval = setInterval(() => {
+    event.target.innerText = event.target.innerText.split("")
+      .map((letter, index) => {
+        if(index < iterations) {
+          return event.target.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
 
-  function nextNews() {
-    currentIndex = (currentIndex + 1) % newsItems.length;
-    showNews(currentIndex);
-  }
+      if(iterations >= 15)
+        clearInterval(interval);
 
-  showNews(currentIndex);
-  setInterval(nextNews, 7000);
-});
+      iterations += 1;
+
+  }, 50);
+
+}
