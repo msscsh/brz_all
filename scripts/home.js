@@ -1,4 +1,5 @@
-function onPageLoad() {
+function embaralharLetras() {
+
   let iterations = 0;
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
