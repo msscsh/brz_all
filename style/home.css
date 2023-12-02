@@ -9,7 +9,7 @@ body {
 
 h1 {
     color: white; /* Nova cor da fonte */
-    font-size: 5rem;
+    font-size: 14rem;
     font-family: "Space Mono", monospace;
 }
 
@@ -71,4 +71,41 @@ span {
 .blink {
   display: inline-block;
   animation: blink 3s ease-in-out infinite;
+}
+
+.screen {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  transition: transform 2s ease-in-out;
+}
+
+.box:nth-child(1) {
+  background-color: lightgray;
+}
+
+.box:nth-child(2) {
+  background-color: lightgray;
+}
+
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
 }
