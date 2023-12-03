@@ -18,51 +18,15 @@ span {
 }
 
 @keyframes blink {
-  0%, 3% {
+  0%, 50% {
     opacity: 1;
     color: #ffff00;
   }
-  4%, 10% {
-    opacity: 0.9;
-    color: #ffff00;
-  }
-  11%, 20% {
-    opacity: 0.8;
-    color: #ffff00;
-  }
-  21%, 30% {
-    opacity: 0.7;
-    color: #ffff00;
-  }
-  31%, 40% {
-    opacity: 0.6;
-    color: #ffff00;
-  }
-  41%, 45% {
-    opacity: 0.5;
-    color: #ffff00;
-  }
-  46%, 51% {
-    opacity: 0.4;
-    color: #ffff00;
-  }
-  52%, 57% {
-    opacity: 0.3;
-    color: #ffff00;
-  }
-  58%, 64% {
-    opacity: 0.2;
-    color: #ffff00;
-  }
-  65%, 78% {
-    opacity: 0.1;
-    color: #ffff00;
-  }
-  79%, 86% {
+  25%, 75% {
     opacity: 0;
     color: #ffff00;
   }
-  87%, 100% {
+  50%, 100% {
     opacity: 1;
     color: #ffff00;
   }
