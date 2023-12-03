@@ -160,6 +160,7 @@ a:visited {
 table {
     border-collapse: collapse;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 th {
