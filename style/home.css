@@ -172,3 +172,6 @@ td {
     text-align: right;
     border-bottom: 1px solid black;
 }
+
+td:nth-child(1), td:nth-child(2), td:nth-child(3) {
+    text-align: center;
