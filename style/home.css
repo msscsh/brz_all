@@ -5,12 +5,15 @@ body {
     margin: 0px;
     overflow: hidden;
     place-items: center;
+    font-size: 16px;
+    font-family: "Space Mono", monospace;
 }
 
 h1 {
-    color: white; /* Nova cor da fonte */
+    color: white;
     font-size: 2em;
-    font-family: "Space Mono", monospace;
+    justify-content: right;
+    display: flex;
 }
 
 @keyframes blink {
@@ -57,17 +60,16 @@ h1 {
 .content {
   display: flex;
   width: 80%;
+  font-size: 1em;
 }
 
 .title {
   display: grid;
   align-items: center;
   width: 30%;
-  border-right: solid;
-  border-color: whitesmoke;
   justify-content: right;
-  padding-right: 5%;
-  font-size: 3rem;
+  padding-right: 1%;
+  font-size: 2em;
 }
 
 .menu {
@@ -76,7 +78,10 @@ h1 {
   justify-content: left;
   display: grid;
   align-items: center;
-  padding-right: 1rem;
+  padding-right: 1%;
+  font-size: 1em;
+  border-left: solid;
+  border-color: whitesmoke;
 }
 
 .hidden {
@@ -94,12 +99,20 @@ ul {
   list-style-type: none;
 }
 
-li, a {
+li {
   color: white;
-  font-size: 6rem;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
   cursor: pointer;
+  font-size: 1.5em;
+}
+
+a {
+  color: white;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 li:hover, a:hover {
@@ -107,5 +120,12 @@ li:hover, a:hover {
 }
 
 a:visited {
-    color: #white; /* Cor do link após ser visitado */
+    color: white;
+}
+
+.liDivide {
+  border-top: solid;
+  border-color: white;
+  margin-top: 5%;
+  padding-top: 5%;
 }
