@@ -177,3 +177,8 @@ td {
 td:nth-child(1), td:nth-child(2), td:nth-child(3) {
     text-align: center;
 }
+
+tr:hover {
+    background-color: black;
+    color: white;
+}
