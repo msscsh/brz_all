@@ -24,3 +24,8 @@ function embaralharLetras() {
   }, 50);
 
 }
+
+function mostrarEsconderPlacarGeral() {
+    var fullscreenDiv = document.getElementById('fullscreenDiv');
+    fullscreenDiv.classList.toggle('active');
+}

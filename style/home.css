@@ -129,3 +129,34 @@ a:visited {
   margin-top: 5%;
   padding-top: 5%;
 }
+
+.fullscreen-div {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Inicia fora da tela */
+    width: 50%;
+    height: 100%;
+    background-color: lightyellow;
+    opacity: 0.9;
+    overflow: hidden;
+    transition: right 0.5s ease; /* Adiciona uma transição suave para o movimento */
+}
+
+.fullscreen-content {
+    padding: 20px;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fullscreen-div.active {
+    right: 0; /* Move para a posição 0 (totalmente visível) */
+}
