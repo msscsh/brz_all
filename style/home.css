@@ -16,6 +16,12 @@ h1 {
     display: flex;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
 @keyframes blink {
   0%, 50% {
     opacity: 1;
@@ -50,7 +56,7 @@ h1 {
   align-items: center;
   font-size: 24px;
   color: white;
-  transition: transform 2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   background-image: url("../assets/brz.png");
   background-repeat: repeat;
   background-size: auto; 
@@ -66,7 +72,7 @@ h1 {
 .title {
   display: grid;
   align-items: center;
-  width: 30%;
+  width: 20%;
   justify-content: right;
   padding-right: 1%;
   font-size: 2em;
@@ -74,7 +80,7 @@ h1 {
 
 .menu {
   display: flex;
-  width: 70%;
+  width: 80%;
   justify-content: left;
   display: grid;
   align-items: center;
@@ -133,30 +139,36 @@ a:visited {
 .fullscreen-div {
     position: fixed;
     top: 0;
-    right: -50%; /* Inicia fora da tela */
+    right: -50%;
     width: 50%;
     height: 100%;
     background-color: lightyellow;
-    opacity: 0.9;
+    opacity: 0.8;
     overflow: hidden;
-    transition: right 0.5s ease; /* Adiciona uma transição suave para o movimento */
-}
-
-.fullscreen-content {
-    padding: 20px;
-    color: #fff;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.close-btn {
-    cursor: pointer;
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    transition: right 0.5s ease-in;
 }
 
 .fullscreen-div.active {
-    right: 0; /* Move para a posição 0 (totalmente visível) */
+    right: 0;
+    padding: 1%;
+    min-height: 100vh;
+    min-width: 55vw; /*Definir aqui o ovelay*/
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 2%;
+}
+
+th {
+    background-color: ghostwhite;
+    text-align: center;
+    border: 1px solid black;
+}
+
+td {
+    text-align: right;
+    border-bottom: 1px solid black;
 }
