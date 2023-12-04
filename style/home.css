@@ -125,10 +125,6 @@ li:hover, a:hover {
   color: yellow;
 }
 
-a:visited {
-    color: white;
-}
-
 .liDivide {
   border-top: solid;
   border-color: white;
