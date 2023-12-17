@@ -25,7 +25,32 @@ function embaralharLetras() {
 
 }
 
-function mostrarEsconderPlacarGeral() {
-    var fullscreenDiv = document.getElementById('fullscreenDiv');
-    fullscreenDiv.classList.toggle('active');
+function mostrarEsconderPlacarGeral(element) {
+  if (document.querySelector('.content').style.display == 'none') {
+    document.querySelector('.content').style.display = 'inline flow-root list-item';
+    document.querySelector('.content').classList.remove('fade-out');
+    document.querySelector('.content').classList.add('reveal-effect');
+  }
+  else {
+    document.querySelector('.content').style.display = 'none';
+    document.querySelector('.content').classList.remove('reveal-effect');
+    document.querySelector('.content').classList.add('fade-out');
+  }
 }
+
+function marcarItem(element) {
+    // Remove a classe 'active' de todos os itens
+    var items = document.querySelectorAll('.menu li');
+    items.forEach(function(item) {
+        item.classList.remove('active');
+    });
+
+    // Adiciona a classe 'active' ao item clicado
+    element.classList.add('active');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  setInterval(embaralharLetras, 4000);
+});
+
+embaralharLetras();

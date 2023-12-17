@@ -1,25 +1,24 @@
 body {
     background-color: rgb(10, 10, 10);
-    display: grid;
-    height: 100vh;
-    margin: 0px;
-    overflow: hidden;
-    place-items: center;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
     font-family: "Space Mono", monospace;
+    text-align: center;
+    overflow: auto;
+    border: solid;
 }
 
 h1 {
     color: white;
-    font-size: 2em;
-    justify-content: right;
-    display: flex;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
+h6{
+    color: white;
+    margin: 0;
+}
+
+table {
+  overflow: auto;
 }
 
 @keyframes blink {
@@ -40,69 +39,35 @@ h2 {
 .blink {
   display: inline-block;
   animation: blink 5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 192, 27, 0.9),
+               0 0 20px rgba(255, 192, 27, 0.9),
+               0 0 30px rgba(255, 192, 27, 0.9);
 }
 
-.screen {
-  display: flex;
+.header {
+  background-color: rgb(10, 10, 10);
+  max-height: 50%;       
+  text-align: center;
+  position: fixed;
   width: 100%;
-  height: 100vh;
-}
-
-.box {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  color: white;
-  transition: transform 0.5s ease-in-out;
-  background-image: url("../assets/brz.png");
-  background-repeat: repeat;
-  background-size: auto; 
-  background-color: lightgray;
-}
-
-.content {
-  display: flex;
-  width: 80%;
-  font-size: 1em;
+  top: 0;
+  z-index: 1000;
 }
 
 .title {
-  display: grid;
-  align-items: center;
-  width: 20%;
-  justify-content: right;
-  padding-right: 1%;
-  font-size: 2em;
 }
 
 .menu {
-  display: flex;
-  width: 80%;
-  justify-content: left;
-  display: grid;
-  align-items: center;
-  padding-right: 1%;
-  font-size: 1em;
-  border-left: solid;
+  border-top: solid;
   border-color: whitesmoke;
-}
-
-.hidden {
-  display: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.visible {
-  display: flex;
-  opacity: 1;
 }
 
 ul {
   list-style-type: none;
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0;
+  border-color: white;
 }
 
 li {
@@ -110,7 +75,7 @@ li {
   transition: color 0.3s ease-in-out;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.5em;
+  border-bottom: solid;
 }
 
 a {
@@ -118,63 +83,77 @@ a {
   transition: color 0.3s ease-in-out;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1em;
+  border-bottom: solid;
 }
 
-li:hover, a:hover {
+li:hover, a:hover, a:active {
   color: yellow;
 }
 
-.liDivide {
-  border-top: solid;
-  border-color: white;
-  margin-top: 5%;
-  padding-top: 5%;
+.content {
+    display: inline flow-root list-item;
+    padding-top: 9rem;
 }
 
-.fullscreen-div {
-    position: fixed;
-    top: 0;
-    right: -50%;
-    width: 50%;
-    height: 100%;
+.preheader {
+  margin: 0;
+}
+
+.detail {
     background-color: lightyellow;
-    opacity: 0.8;
-    overflow: hidden;
-    transition: right 0.5s ease-in;
-}
-
-.fullscreen-div.active {
-    right: 0;
-    padding: 1%;
-    min-height: 100vh;
-    min-width: 55vw; /*Definir aqui o ovelay*/
-    overflow-y: auto;
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-th {
-    background-color: ghostwhite;
-    text-align: center;
-    border: 1px solid black;
+    opacity: 0.7;
+    margin-bottom: 2rem;
 }
 
 td {
-    text-align: right;
-    border-bottom: 1px solid black;
+    display: none;
 }
 
-td:nth-child(1), td:nth-child(2), td:nth-child(3) {
-    text-align: center;
+td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4)  {
+    display: table-cell;
 }
 
-tbody tr:hover {
+tr:hover {
     background-color: black;
     color: white;
+}
+tr:nth-child(1):hover {
+    background-color: lightyellow;
+    color: black;
+}
+
+.botton {
+    color: yellow;
+    border-top: solid;
+}
+
+.reveal-effect {
+    opacity: 0;
+    transform: translateY(-80rem);
+    animation: revealAnimation 4s ease-in-out forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOutAnimation 3s ease-in-out forwards;
+}
+
+@keyframes revealAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-80rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
