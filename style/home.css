@@ -1,21 +1,21 @@
 body {
-    background-color: rgb(10, 10, 10);
-    margin: 0;
-    padding: 0;
-    font-family: "Space Mono", monospace;
-    text-align: center;
-    overflow: auto;
-    border: solid;
-    font-size: 10px;
+  background-color: rgb(10, 10, 10);
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  overflow: auto;
+  border: solid;
+  font-size: 16px;
 }
 
 h1 {
-    color: white;
+  color: white;
 }
 
-h6{
-    color: white;
-    margin: 0;
+h6 {
+  color: white;
+  margin: 0;
 }
 
 table {
@@ -53,7 +53,7 @@ table {
   width: 100%;
   top: 0;
   z-index: 1000;
-  font-size: 3vw;
+  font-size: 2rem;
 }
 
 .title {
@@ -62,6 +62,7 @@ table {
 .menu {
   border-top: solid;
   border-color: whitesmoke;
+  font-size: 1.5rem;
 }
 
 ul {
@@ -95,7 +96,7 @@ li:hover, a:hover, a:active {
 .content {
   display: inline flow-root list-item;
   padding-top: 10em;
-  font-size: 3vw;
+  font-size: 1.5rem;
 }
 
 .preheader {
@@ -113,50 +114,50 @@ td {
 }
 
 td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4)  {
-    display: table-cell;
+  display: table-cell;
 }
 
 tr:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 tr:nth-child(1):hover {
-    background-color: lightyellow;
-    color: black;
+  background-color: lightyellow;
+  color: black;
 }
 
 .botton {
-    color: yellow;
-    border-top: solid;
+  color: yellow;
+  border-top: solid;
 }
 
 .reveal-effect {
-    opacity: 0;
-    transform: translateY(-80em);
-    animation: revealAnimation 4s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(-80em);
+  animation: revealAnimation 4s ease-in-out forwards;
 }
 
 .fade-out {
-    opacity: 1;
-    animation: fadeOutAnimation 3s ease-in-out forwards;
+  opacity: 1;
+  animation: fadeOutAnimation 3s ease-in-out forwards;
 }
 
 @keyframes revealAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(-80em);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+      opacity: 0;
+      transform: translateY(-80em);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 @keyframes fadeOutAnimation {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
 }
