@@ -2,8 +2,7 @@ body {
   background-color: rgb(10, 10, 10);
   margin: 0;
   padding: 0;
-/*  font-family: "Roboto", "Space Mono", monospace;*/
-  font-family: 'Noto Sans', 'Arial Unicode MS', 'Segoe UI', 'DejaVu Sans', 'Code2000', sans-serif;
+  font-family: "Space Mono", "Noto Sans", "Roboto", sans-serif;;
   text-align: center;
   overflow: auto;
   border: solid;
