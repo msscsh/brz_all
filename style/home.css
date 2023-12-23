@@ -208,6 +208,12 @@ tr:nth-child(1):hover {
 .nickname {
   font-size: 2rem;
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.role {
+  margin-top: 0;
+  font-weight: bolder;
 }
 
 .simple-label {
