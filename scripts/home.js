@@ -42,11 +42,12 @@ function closePopup() {
   document.getElementById('popup').style.display = 'none';
 }
 
-function displayPopup(nickname, points, starplayer, showdown, normalgame, powerleague) {
+function displayPopup(nickname, points, starplayer, showdown, normalgame, powerleague, role) {
   var popup = document.getElementById('popup');
   popup.style.display = 'grid';
 
   adicionaValorNoID('nickname', nickname);
+  adicionaValorNoID('role', role);
   adicionaValorNoID('points', points);
   adicionaValorNoID('starplayer', starplayer);
   adicionaValorNoID('showdown', firularAApresentacao(showdown), true);
@@ -89,7 +90,8 @@ document.addEventListener("DOMContentLoaded", function() {
           var showdown = row.cells[5].textContent;
           var normalgame = row.cells[6].textContent;
           var powerleague = row.cells[7].textContent;
-          displayPopup(nickname, points, starplayer, showdown, normalgame, powerleague);
+          var role = row.cells[8].textContent;
+          displayPopup(nickname, points, starplayer, showdown, normalgame, powerleague, role);
       });
   });
 
